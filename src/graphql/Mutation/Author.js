@@ -8,6 +8,8 @@ const addAuthor = async (_obj, args, context) => {
       lastName: args.input.lastName,
       age: args.input.age,
       email: args.input.email,
+      numBooksPublished: args.input.numBooksPublished, 
+      addressId: args.input.addressId
     }).returning('*')
     return authors
   } catch (err) {

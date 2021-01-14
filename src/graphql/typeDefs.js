@@ -18,13 +18,13 @@ module.exports = gql`
 
   type Book {
     id: ID!
-    title: String!
-    language: String!
+    title: String
+    language: String
     numPages: Int 
     datePublished: Date 
     bestseller: Boolean
-    authorId: ID!
-    publisherId: ID!
+    authorId: ID
+    publisherId: ID
   }
 
   type Publisher {
@@ -42,8 +42,8 @@ module.exports = gql`
     lastName: String!
     age: Int!
     email: String!
-    numBooksPublished: Int!
-    addressId: ID!
+    numBooksPublished: Int
+    addressId: ID
   }
 
   type Address {
@@ -56,12 +56,12 @@ module.exports = gql`
 
   input newBook {
     title: String!
-    language: String!
+    language: String
     numPages: Int 
     datePublished: Date 
     bestseller: Boolean
-    authorId: ID!
-    publisherId: ID!
+    authorId: ID
+    publisherId: ID
   }
 
   input newAuthor {
@@ -69,6 +69,8 @@ module.exports = gql`
     lastName: String!
     age: Int
     email: String
+    numBooksPublished: Int
+    addressId: ID
   }
   
   scalar Date

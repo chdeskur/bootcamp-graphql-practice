@@ -12,7 +12,7 @@ exports.up = knex => knex.schema.createTable('authors', table => {
 
   table.integer('age')
 
-  table.string('email').unique()
+  table.string('email')
 
   table.integer('numBooksPublished').defaultTo(0)
 
